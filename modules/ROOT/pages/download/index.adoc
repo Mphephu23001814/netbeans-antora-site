@@ -1,58 +1,24 @@
-////
-     Licensed to the Apache Software Foundation (ASF) under one
-     or more contributor license agreements.  See the NOTICE file
-     distributed with this work for additional information
-     regarding copyright ownership.  The ASF licenses this file
-     to you under the Apache License, Version 2.0 (the
-     "License"); you may not use this file except in compliance
-     with the License.  You may obtain a copy of the License at
+import java.util.Scanner;
 
-       http://www.apache.org/licenses/LICENSE-2.0
+public class Rectangle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-     Unless required by applicable law or agreed to in writing,
-     software distributed under the License is distributed on an
-     "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-     specific language governing permissions and limitations
-     under the License.
-////
-////
+        // Input length and width
+        System.out.print("Enter the length of the rectangle: ");
+        double length = scanner.nextDouble();
+        
+        System.out.print("Enter the width of the rectangle: ");
+        double width = scanner.nextDouble();
 
-NOTE: 
-See https://www.apache.org/dev/release-download-pages.html 
-for important requirements for download pages for Apache projects.
+        // Calculate area and perimeter
+        double area = length * width;
+        double perimeter = 2 * (length + width);
 
-////
-= Apache NetBeans Releases
-:page-layout: page
-:page-tags: download
-:jbake-status: published
-:keywords: Apache NetBeans releases
-:icons: font
-:description: Apache NetBeans Releases Page
-:page-syntax: true
-:source-highlighter: pygments
-:experimental:
-:linkattrs:
+        // Output results
+        System.out.println("Area of the rectangle: " + area);
+        System.out.println("Perimeter of the rectangle: " + perimeter);
 
-Apache NetBeans is released four times a year. For details, see link:https://cwiki.apache.org/confluence/display/NETBEANS/Release+Schedule[full release schedule].
-
-== Apache NetBeans 25
-
-Latest version of the IDE, released on February 20, 2025.
-// TODO date                           ^^^^
-
-xref:download/nb25/index.adoc[Download, role="button success"]
-
-== Older releases
-
-Older Apache NetBeans releases can still be downloaded, but are no longer supported.
-
-xref:download/archive/index.adoc[Find out more, role="button"]
-
-== Daily builds and building from source
-
-All Apache NetBeans source code is freely available to build yourself, or you can
-download (unsupported) daily development builds.
-
-xref:download/dev/index.adoc[Find out more, role="button"]
+        scanner.close();
+    }
+}
